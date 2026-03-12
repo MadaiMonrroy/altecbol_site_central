@@ -11,10 +11,10 @@
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- CSS propio -->
+    <!-- CSS propio -->
     <link rel="stylesheet" href="styles.css">
     <!-- Fuentes: Inter para lectura, JetBrains Mono para toques tecnológicos -->
-    
+
 </head>
 
 <body class="min-h-screen flex justify-center py-10 px-4 relative">
@@ -100,39 +100,24 @@
             <!-- Módulos de Acceso (Botones) -->
             <div class="flex flex-col gap-4 w-full">
 
-                <!-- 1. Página Web -->
-                <a href="https://altecbol.com.bo/" target="_blank"
-                    class="hud-btn w-full py-4 px-5 rounded-lg flex items-center justify-between group cursor-pointer backdrop-blur-md">
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="bg-[#0050b0]/30 p-2 rounded text-[#01d3d1] group-hover:bg-[#01d3d1] group-hover:text-[#050b14] transition-colors">
-                            <i class="fas fa-laptop-code text-lg w-5 text-center"></i>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="font-bold text-[#eaeaea] tracking-wide text-sm">Portal Web Corporativo</span>
-                            <span class="font-sys text-[10px] text-[#01d3d1] opacity-70">altecbol.com.bo</span>
-                        </div>
-                    </div>
-                    <i
-                        class="fas fa-arrow-right text-[#01d3d1] opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
-                </a>
+
 
                 <!-- 2. Catálogo PDF -->
-                <a href="portafolio.servicios.pdf" target="_self"
-                    class="hud-btn w-full py-4 px-5 rounded-lg flex items-center justify-between group cursor-pointer backdrop-blur-md">
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="bg-[#0050b0]/30 p-2 rounded text-[#01d3d1] group-hover:bg-[#01d3d1] group-hover:text-[#050b14] transition-colors">
-                            <i class="fas fa-file-pdf text-lg w-5 text-center"></i>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="font-bold text-[#eaeaea] tracking-wide text-sm">Catálogo de Soluciones</span>
-                            <span class="font-sys text-[10px] text-[#01d3d1] opacity-70">DOC_PDF // 2.4MB</span>
-                        </div>
-                    </div>
-                    <i
-                        class="fas fa-download text-[#01d3d1] opacity-50 group-hover:opacity-100 group-hover:translate-y-1 transition-all"></i>
-                </a>
+                <button id="descargarPortafolioBtn"
+    class="hud-btn w-full py-4 px-5 rounded-lg flex items-center justify-between group cursor-pointer backdrop-blur-md text-left">
+    <div class="flex items-center gap-4">
+        <div
+            class="bg-[#0050b0]/30 p-2 rounded text-[#01d3d1] group-hover:bg-[#01d3d1] group-hover:text-[#050b14] transition-colors">
+            <i class="fas fa-file-pdf text-lg w-5 text-center"></i>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-bold text-[#eaeaea] tracking-wide text-sm">Portafolio de Soluciones</span>
+            <span class="font-sys text-[10px] text-[#01d3d1] opacity-70">DOC_PDF // 2.4MB</span>
+        </div>
+    </div>
+    <i
+        class="fas fa-download text-[#01d3d1] opacity-50 group-hover:opacity-100 group-hover:translate-y-1 transition-all"></i>
+</button>
 
                 <!-- 3. Proyectos -->
                 <button onclick="switchView('view-portfolio')"
@@ -150,7 +135,22 @@
                     </div>
                     <i class="fas fa-folder-open text-[#01d3d1] opacity-50 group-hover:opacity-100 transition-all"></i>
                 </button>
-
+                <!-- 1. Página Web -->
+                <a href="https://altecbol.com.bo/" target="_blank"
+                    class="hud-btn w-full py-4 px-5 rounded-lg flex items-center justify-between group cursor-pointer backdrop-blur-md">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="bg-[#0050b0]/30 p-2 rounded text-[#01d3d1] group-hover:bg-[#01d3d1] group-hover:text-[#050b14] transition-colors">
+                            <i class="fas fa-laptop-code text-lg w-5 text-center"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-[#eaeaea] tracking-wide text-sm">Portal Web Corporativo</span>
+                            <span class="font-sys text-[10px] text-[#01d3d1] opacity-70">altecbol.com.bo</span>
+                        </div>
+                    </div>
+                    <i
+                        class="fas fa-arrow-right text-[#01d3d1] opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                </a>
                 <!-- 4. Contactos -->
                 <button onclick="switchView('view-contacts')"
                     class="hud-btn w-full py-4 px-5 rounded-lg flex items-center justify-between group cursor-pointer backdrop-blur-md text-left">
@@ -230,11 +230,12 @@
                     <p class="social-text">
                         En esta sección puedes ver novedades, proyectos, contenido corporativo y publicaciones
                         destacadas
-                        
+
                     </p>
 
                     <div class="social-actions">
-                        <a href="https://www.facebook.com/profile.php?id=61581125392128" target="_blank" class="social-btn">
+                        <a href="https://www.facebook.com/profile.php?id=61581125392128" target="_blank"
+                            class="social-btn">
                             <i class="fab fa-facebook-f"></i> Ver página
                         </a>
                         <a href="https://www.instagram.com/altecbol.oficial/" target="_blank" class="social-btn">
@@ -355,15 +356,14 @@
                 <!-- VENCORP -->
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
-                        <img src="img/project/vencorp.png"
-    alt="Call center corporativo y telefonía IP">
+                        <img src="img/project/vencorp.png" alt="Call center corporativo y telefonía IP">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
-                            
-                           
-                    <img src="img/vencorp.png" alt="Logo Vencorp">
-                   
+
+
+                            <img src="img/vencorp.png" alt="Logo Vencorp">
+
                         </div>
 
                         <div class="project-id-badge">CASE-001</div>
@@ -389,8 +389,7 @@
                 <!-- IMEX -->
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
-                        <img src="img/project/imexp.png"
-    alt="Seguridad, auditoría y trazabilidad empresarial">
+                        <img src="img/project/imexp.png" alt="Seguridad, auditoría y trazabilidad empresarial">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
@@ -420,8 +419,7 @@
                 <!-- MERCOMEX -->
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
-                        <img src="img/project/mercomexp.png"
-    alt="Infraestructura de servidores y data center">
+                        <img src="img/project/mercomexp.png" alt="Infraestructura de servidores y data center">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
@@ -451,8 +449,7 @@
                 <!-- GRUPO LUCKY -->
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
-                        <img src="img/project/luckyp.png"
-    alt="Conectividad multisede y red segura empresarial">
+                        <img src="img/project/luckyp.png" alt="Conectividad multisede y red segura empresarial">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
@@ -469,7 +466,7 @@
                         <div class="project-tags">
                             <span class="project-tag">VPN</span>
                             <span class="project-tag">MULTISEDE</span>
-                           
+
                         </div>
 
                         <p class="project-summary">
@@ -482,8 +479,7 @@
                 <!-- COLEGIO MEDICO -->
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
-                        <img src="img/project/medicop.png"
-    alt="Red protegida y conectividad segura">
+                        <img src="img/project/medicop.png" alt="Red protegida y conectividad segura">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
@@ -514,7 +510,7 @@
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
                         <img src="img/project/siranip.png"
-    alt="Soporte técnico empresarial y mantenimiento de servidores">
+                            alt="Soporte técnico empresarial y mantenimiento de servidores">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
@@ -544,8 +540,7 @@
                 <!-- CLIFABOL -->
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
-                       <img src="img/project/clifabolp.png"
-    alt="Atención automática, IVR y llamadas empresariales">
+                        <img src="img/project/clifabolp.png" alt="Atención automática, IVR y llamadas empresariales">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
@@ -575,8 +570,7 @@
                 <!-- ZYRA -->
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
-                        <img src="img/project/zyrap.png"
-    alt="BPO, data center y telefonía IP empresarial">
+                        <img src="img/project/zyrap.png" alt="BPO, data center y telefonía IP empresarial">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
@@ -606,8 +600,7 @@
                 <!-- IGA -->
                 <div class="project-card tech-corner">
                     <div class="project-image-wrap">
-                        <img src="img/project/igap.png"
-alt="Sistema de cámaras CCTV">
+                        <img src="img/project/igap.png" alt="Sistema de cámaras CCTV">
                         <div class="project-overlay"></div>
 
                         <div class="project-logo-slot">
@@ -838,42 +831,68 @@ alt="Sistema de cámaras CCTV">
 
     <!-- Script para controlar el cambio de vistas -->
     <script>
-        function switchView(viewId) {
-            // Efecto de sonido (opcional, simula terminal)
-            // const audio = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
-            // audio.volume = 0.2;
-            // audio.play().catch(e => console.log("Audio not played automatically"));
+    function switchView(viewId) {
+        const views = document.querySelectorAll('.view-section');
 
-            const views = document.querySelectorAll('.view-section');
+        views.forEach(view => {
+            view.classList.add('hidden');
+        });
 
-            views.forEach(view => {
-                view.classList.add('hidden');
+        const activeView = document.getElementById(viewId);
+        if (activeView) {
+            activeView.classList.remove('hidden');
+            activeView.classList.remove('fade-in');
+            void activeView.offsetWidth;
+            activeView.classList.add('fade-in');
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const descargarBtn1 = document.getElementById("descargarPortafolioBtn");
+        const descargarBtn2 = document.getElementById("descargarPortafolioBtn2");
+
+        function descargarPDF(ruta) {
+            fetch(ruta)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("No se pudo obtener el PDF");
+                    }
+                    return response.blob();
+                })
+                .then((blob) => {
+                    const blobURL = URL.createObjectURL(blob);
+
+                    const link = document.createElement("a");
+                    link.href = blobURL;
+                    link.download = "Portafolio-Servicios-Altecbol.pdf";
+
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    URL.revokeObjectURL(blobURL);
+                })
+                .catch((error) => {
+                    console.error("Error al descargar el archivo:", error);
+                    alert("No se pudo descargar el PDF.");
+                });
+        }
+
+        if (descargarBtn1) {
+            descargarBtn1.addEventListener("click", function () {
+                descargarPDF("portafolio.servicios.pdf");
             });
-
-            const activeView = document.getElementById(viewId);
-            if (activeView) {
-                activeView.classList.remove('hidden');
-                activeView.classList.remove('fade-in');
-                void activeView.offsetWidth;
-                activeView.classList.add('fade-in');
-            }
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        function descargarPDF() {
 
-            const url = "portafolio.servicios.pdf"; // ruta del PDF
-
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "Portafolio-Servicios-Altecbol.pdf";
-
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
+        if (descargarBtn2) {
+            descargarBtn2.addEventListener("click", function () {
+                descargarPDF("portafolio.servicios.pdf");
+            });
         }
-    </script>
+    });
+</script>
 </body>
 
 </html>
